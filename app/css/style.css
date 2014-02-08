@@ -1,0 +1,155 @@
+   body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+
+.menu21{
+
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	z-index: 999999;
+	background-color: rgba(255,255,2555,0.75);
+	padding: 10px;
+
+}
+.leaflet-control-zoom{
+	left: 410px;
+	/*top: 50px;*/
+}
+
+
+.sidebar{
+    background: #fff;      
+    position: absolute;
+    top: 0px;   
+    float: left;
+    height: 100%;  
+    width: 400px;   
+    z-index: 12; 
+    max-height: 100%;
+    left: 10px;
+
+overflow-y:scroll;
+     
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.timeline-header .custom-timeline-summary, .timeline-header h1.summary {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+}
+.timeline-header {
+    border-width: 0 0 1px;
+    box-shadow: 0 0 0 -3px rgba(0, 0, 0, 0);
+    padding: 12px;
+    transition: box-shadow 0.3s ease-out 0s;
+        -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.timeline-header, .timeline-footer {
+    position: relative;
+    z-index: 100;
+}
+.timeline-header a{
+    text-decoration: none;
+    color: #000;
+}
+
+.customisable-border {
+    border: 1px solid #E8E8E8;
+}
+
+
+.sidebar .well{
+	padding: 2px;
+	margin: 1px;
+}
+.row_tweet{
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.photo{
+	/*background: #000;*/
+	width: 50px;
+	height:auto;
+	float: left;
+	left: 0px;
+	margin-right: 5px;
+}
+
+
+.user{
+	/*background: #158;*/
+	position: relative;
+	top: 0px;
+	right: 0px;
+	/*color: #55ACEE;*/
+	
+}
+
+ #name_u{
+
+		font-weight: bold;
+		font-size: 14px;
+		font-family: arial;
+
+}
+#screen_name{
+font-size: 12px;
+color: #555;
+}
+
+#created_at{
+	float: right;
+	font-size: 11px;
+color: #555;
+}
+
+#text_t{
+	font-size: 13px;
+}
+
+#source{
+	font-size: 10px;
+	color: #55ACEE;
+	float: left;
+}
+/*.show_map{
+	float: right;
+}*/
+
+#tweets{
+
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(127,133,135);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgb(127,133,135);
+}
+
+.leaflet-control-layers{
+	top: 70px;
+}

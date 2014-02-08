@@ -10,7 +10,7 @@
 CREATE TABLE tweet(
      id_t VARCHAR(25) not null primary key,
      text_t text,
-     created_at VARCHAR(35),
+     created_at numeric,
      source VARCHAR(10),
      latitud numeric,
      longitud numeric,
@@ -43,7 +43,7 @@ CREATE OR REPLACE FUNCTION registrar_tweet(
 	_estado_u boolean,
 	_id_t VARCHAR(25),
 	_text_t text,
-	_created_at VARCHAR(35),
+	_created_at numeric,
 	_source VARCHAR(10),
 	_latitud numeric,
 	_longitud numeric,
@@ -76,4 +76,17 @@ DECLARE
 	RETURN _existe_tweet;
 	END;
 $$ LANGUAGE plpgsql;
+
+
+
+
+CREATE OR REPLACE VIEW get_data AS
+	SELECT t.id_t, t.text_t, substring(to_timestamp(t.created_at)::text,0,11) AS created_at, t.source, t.latitud, t.longitud, t.imagen,u.id_u, u.name_u, u.screen_name, u.profile_image_url
+	from tweet t
+	LEFT JOIN usuario_tweet ut ON t.id_t::text = ut.id_t::text
+	LEFT JOIN usuario u ON ut.id_u::text = u.id_u::text
+	ORDER BY  t.created_at DESC;
+	
+
+select * from get_data;
 
