@@ -5,10 +5,17 @@ var goglesatelite = L.tileLayer('https://khms0.google.com/kh/v=145&src=app&x={x}
 var goglemap = L.tileLayer('https://mts0.google.com/vt/hl=es&src=app&x={x}&y={y}&z={z}');
 
 L.control.layers({
-    'Distritos': L.mapbox.tileLayer('examples.map-9ijuk24y').addTo(map),
-    'Mapbox': L.mapbox.tileLayer('ruben.map-tlseskm0'),
-    'Open Street Map': osm,
-    'Google Satelite': goglesatelite,
-    'Google Map': goglemap
+	'Mapbox': L.mapbox.tileLayer('ruben.map-tlseskm0').addTo(map),
+	'Open Street Map': osm,
+	'Google Satelite': goglesatelite,
+	'Google Map': goglemap
 
 }).addTo(map);
+
+
+var myIcon = L.icon({
+	iconUrl: 'http://a.tiles.mapbox.com/v3/marker/pin-s-danger+000000.png',
+	iconSize: [20, 50],
+	popupAnchor: [0, -20],
+	className: "dot"
+});
