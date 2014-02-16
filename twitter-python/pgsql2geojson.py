@@ -4,9 +4,12 @@ import time
 from sys import argv
 import json
 import codecs
+import os
 
 conn = psycopg2.connect(database="test3python", user="postgres",password="1234")
 cursor = conn.cursor()
+filepath = '/home/ruben/Dropbox/webpages/stest_pistasme/twitter-python/'
+
 geojson = { "type": "FeatureCollection", "features": [] }
 
 
@@ -43,7 +46,8 @@ for tweet in resultados:
 
 cursor.close()
 conn.close()
-json.dump(geojson, open('twiter_from_pgsql.js', 'w'))    
+json.dump(geojson, open(os.path.join(filepath,'datatwitter21.js'), 'w'))
+#json.dump(geojson, open('twiter_from_pgsql.js', 'w'))    
 
 
 
